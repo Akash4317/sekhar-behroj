@@ -676,7 +676,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12 col-sm-12-col-12">
+                <div class="col-lg-3 col-md-12 col-sm-12-col-12 mobile-hidden">
                     <div class="cart_right_sec">
                         <div class="cart_right_sec-inner">
                             <div class="cart_logo_wrap">
@@ -1263,7 +1263,7 @@
                 </svg>
                 <div class="menuTitle">Party Order</div>
             </div>
-            <div class="style__MenuItem-sc-1p3kffi-1 kpoboy"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+            <div class="style__MenuItem-sc-1p3kffi-1 kpoboy cart_click"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_981_9187" maskUnits="userSpaceOnUse" x="13" y="16" width="5" height="4"
                         style="mask-type: luminance;">
@@ -1339,11 +1339,85 @@
         </div>
         <div class="close_menu">✕ Close</div>
     </div>
+    <div class="mobile_cart">
+        <div class="aside_cross">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div class="cart_right_sec">
+            <div class="cart_right_sec-inner">
+                <div class="cart_logo_wrap">
+                    <div class="cart_logo">
+                        <img src="images/cart_logo.jpeg" alt="" title="">
+                    </div>
+                    <div class="desc_cart">
+                        <h3>Happy Meal Express</h3>
+                        <p>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Shop no 4, 5, 6 situated at Vicky complex 12/2 main road sector 37 faridabad
+                            haryana
+                            faridabad
+                        </p>
+                    </div>
+                </div>
+                <div class="quantity_cntnr_with_avtar d-flex align-items-center">
+                    <div class="avatar">
+                        <img src="images/avtar.jpg" alt="" title="">
+                    </div>
+                    <div class="veg_non_veg_sign d-flex align-items-center">
+                        <div class="veg_non_veg_sign_inner">
+                            <i class="fa fa-circle" aria-hidden="true"></i>
+                        </div>
+                        <p>Achari Paneer Tikka</p>
+                    </div>
+                    <div class="quantity">
+                        <button class="minus" aria-label="Decrease" disabled="">−</button>
+                        <input type="number" class="input-box" value="1" min="1" max="10" fdprocessedid="e2uwas">
+                        <button class="plus" aria-label="Increase" fdprocessedid="74dk4m">+</button>
+                    </div>
+                    <div class="price_cart">
+                        <span>₹200</span>
+                    </div>
+                </div>
+                <div class="item_total">
+                    <div class="item_wrap d-flex align-items-center justify-content-between">
+                        <div class="item-left">Item Total</div>
+                        <div class="item_total_price">₹200</div>
+                    </div>
+                    <div class="item_wrap d-flex align-items-center justify-content-between">
+                        <div class="item-left">Restaurant Charges</div>
+                        <div class="item_total_price">0</div>
+                    </div>
+                    <div class="item_wrap d-flex align-items-center justify-content-between">
+                        <div class="item-left">Delivery Fee <i class="fa fa-info-circle" aria-hidden="true"></i></div>
+                        <div class="item_total_price">0</div>
+                    </div>
+                    <div class="item_wrap d-flex align-items-center justify-content-between">
+                        <div class="item-left">Total Discount</div>
+                        <div class="item_total_price">0</div>
+                    </div>
+
+                </div>
+                <div class="to_pay d-flex align-items-center justify-content-between">
+                    <div class="topay_left">TO PAY</div>
+                    <div class="topay_right">₹200</div>
+                </div>
+                <button class="checkout_btn" fdprocessedid="tx0xam">Checkout ₹200 <i class="fa fa-chevron-right" aria-hidden="true"></i>
+
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script>
     $(".sort_filter,.filter_sort_icon").click(function(){
         $(".drop_down").slideToggle();
+    });
+    $(".cart_click").click(function(){
+        $(".mobile_cart").css({"right":"0"})
+    });
+    $(".aside_cross").click(function(){
+        $(".mobile_cart").css({"right":"-100%"})
     })
     $('.owl-new').owlCarousel({
         nav: false,
